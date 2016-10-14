@@ -14,9 +14,6 @@ exports.debug = (title, obj) => {
   const output = seperator + title + JSON.stringify(obj) + '\n' + time + seperator;
 
   if (process.env.DEBUG) {
-    fs.appendFile('lib/logs/eLog.log', output, 'utf8', (err) => {
-      if (err) throw err;
-    });
     console.log(output);
   }
 };
